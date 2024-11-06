@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.MainViewController">
+   <children>
+      <SplitPane dividerPositions="0.5531914893617021" orientation="VERTICAL" prefHeight="613.0" prefWidth="545.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+              <children>
+                 <Label layoutX="216.0" layoutY="14.0" text="Reserva">
+                    <font>
+                       <Font name="System Bold" size="18.0" />
+                    </font>
+                 </Label>
+                 <DatePicker fx:id="fechaInicioPicker" layoutX="21.0" layoutY="72.0" prefHeight="31.0" prefWidth="218.0" />
+                 <DatePicker fx:id="fechaFinPicker" layoutX="262.0" layoutY="74.0" prefHeight="31.0" prefWidth="218.0" />
+                 <Label layoutX="61.0" layoutY="28.0" prefHeight="27.0" prefWidth="114.0" text="Inicio reserva">
+                    <font>
+                       <Font size="15.0" />
+                    </font>
+                 </Label>
+                 <Label layoutX="314.0" layoutY="34.0" prefHeight="27.0" prefWidth="114.0" text="Fin reserva">
+                    <font>
+                       <Font size="18.0" />
+                    </font>
+                 </Label>
+                 <ChoiceBox fx:id="clienteChoiceBox" layoutX="21.0" layoutY="144.0" prefHeight="31.0" prefWidth="218.0" />
+                 <ChoiceBox fx:id="vehiculoChoiceBox" layoutX="272.0" layoutY="144.0" prefHeight="31.0" prefWidth="218.0" />
+                 <TextField fx:id="costoTextField" layoutX="153.0" layoutY="260.0" prefHeight="31.0" prefWidth="218.0" />
+                 <Label layoutX="102.0" layoutY="117.0" prefHeight="27.0" prefWidth="114.0" text="Clientes">
+                    <font>
+                       <Font size="18.0" />
+                    </font>
+                 </Label>
+                 <Label layoutX="347.0" layoutY="117.0" prefHeight="27.0" prefWidth="114.0" text="Vehiculos" textAlignment="JUSTIFY">
+                    <font>
+                       <Font size="18.0" />
+                    </font>
+                 </Label>
+                 <Button layoutX="153.0" layoutY="213.0" mnemonicParsing="false" onAction="#calcularCosto" prefHeight="31.0" prefWidth="218.0" text="Calcular Costo" />
+              </children>
+           </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+              <children>
+                 <TableView fx:id="reservasTable" layoutX="7.0" layoutY="6.0" prefHeight="206.0" prefWidth="528.0">
+                    <columns>
+                       <TableColumn fx:id="colFechaInicio" prefWidth="119.0" text="Inicio reserva" />
+                       <TableColumn fx:id="colFechaFin" prefWidth="118.0" text="Fin reserva" />
+                       <TableColumn fx:id="colCliente" prefWidth="79.0" text="Cliente" />
+                       <TableColumn fx:id="colVehiculo" prefWidth="83.0" text="Vehiculo" />
+                       <TableColumn fx:id="colCosto" prefWidth="128.0" text="Cuenta total" />
+                    </columns>
+                 </TableView>
+                 <Button layoutX="27.0" layoutY="224.0" mnemonicParsing="false" onAction="#eliminarReserva" prefHeight="31.0" prefWidth="147.0" text="Eliminar Reserva" />
+                 <Button layoutX="368.0" layoutY="224.0" mnemonicParsing="false" onAction="#limpiarFormulario" prefHeight="31.0" prefWidth="147.0" text="Limpiar" />
+                 <Button layoutX="198.0" layoutY="224.0" mnemonicParsing="false" onAction="#guardarReserva" prefHeight="31.0" prefWidth="147.0" text="Guardar Reserva" />
+              </children>
+           </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
